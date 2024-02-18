@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:wght@400;500;700&display=swap");
+
+:root {
+  /* Primary */
+
+  --Light-red-text: hsl(356, 100%, 66%);
+  --Very-dark-blue-heading: hsl(208, 49%, 24%);
+  --Very-light-red-hover-bg: hsl(355, 100%, 74%);
+
+  /* Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Grayish-blue-footer-txt: hsl(240, 2%, 79%);
+  --Very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --Very-dark-black-blue-footer-bg: hsl(240, 10%, 16%);
+
+  /* Gradient */
+
+  --Light-red: hsl(353, 100%, 62%);
+  --Very-light-red: hsl(13, 100%, 72%);
+
+  --top-bg-gradient: linear-gradient(
+    to left,
+    var(--Light-red),
+    var(--Very-light-red)
+  );
+
+  --Very-dark-gray-blue: hsl(237, 17%, 21%);
+  --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+  /* Font-Family */
+
+  --Ubuntu: "Ubuntu";
+  --Overpass: "Overpass";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* header */
+
+#header {
+  padding: 5vh 10vw;
+  font-family: var(--Ubuntu);
+  border-radius: 0 0 0 4.5rem;
+  background: url(./images/bg-pattern-intro-desktop.svg), var(--top-bg-gradient);
+  background-position: 17% 50.6%;
+}
+
+#logo-links {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  margin-bottom: 4rem;
+}
+
+nav,
+#register {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  margin-right: 5vw;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.link,
+#login a {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.link:nth-child(2) {
+  margin-inline: 1.6rem;
+}
+
+a,
+a:active,
+a:visited {
+  color: var(--White);
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.link a:focus > img {
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+
+.link > a > img {
+  margin-left: 6px;
+}
+
+button {
+  border: none;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 40px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn,
+.learn-more:hover {
+  color: var(--Light-red);
+  background-color: var(--White);
+}
+
+.btn:hover {
+  color: var(--White);
+  background-color: var(--Very-light-red-hover-bg);
+}
+
+#signUp-btn {
+  margin-left: 2rem;
+}
+
+.learn-more {
+  margin-left: 0.7rem;
+  color: var(--White);
+  background-color: transparent;
+  border: 1px solid var(--White);
+}
+
+#hero-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4.5rem;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--White);
+  font-family: var(--Overpass);
+}
+
+.hero-para {
+  color: var(--White);
+  margin-block: 0.5rem 2.8rem;
+}
+
+#register {
+  font-weight: 900;
+}
+
+/* main */
+main {
+  display: flex;
+  height: 100dvh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+#main-txt-img {
+  display: flex;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-block: 14vh 10vh;
+  font-family: var(--Ubuntu);
+  color: var(--Very-dark-blue-heading);
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 3vh;
+  font-family: var(--Ubuntu);
+  color: var(--Very-dark-blue-heading);
+}
+
+#left {
+  width: 50%;
+  display: flex;
+  margin-left: 12vw;
+  flex-direction: column;
+  justify-content: baseline;
+}
+
+#left .para {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  font-family: var(--Overpass);
+  color: var(--Very-dark-grayish-blue);
+}
+
+#editor,
+#management {
+  margin: 0 0 5vh 0;
+}
+
+#editor .para {
+  width: 67%;
+}
+
+#management .para {
+  width: 64%;
+}
