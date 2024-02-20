@@ -50,11 +50,11 @@
 /* header */
 
 #header {
-  padding: 5vh 10vw;
+  padding: 6.5vh 10vw;
   font-family: var(--Ubuntu);
   border-radius: 0 0 0 4.5rem;
   background: url(./images/bg-pattern-intro-desktop.svg), var(--top-bg-gradient);
-  background-position: 17% 50.6%;
+  background-position: 23% 53%;
 }
 
 #logo-links {
@@ -63,7 +63,7 @@
 }
 
 nav {
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 
 .hamburger {
@@ -83,17 +83,64 @@ nav,
 
 ul {
   display: flex;
+  column-gap: 1.8rem;
   list-style-type: none;
+}
+
+ul > li > a {
+  font-size: 16px;
+}
+
+#navLinks {
+  position: relative;
+}
+
+#navLinks .menu {
+  top: 2.6rem;
+  left: -1rem;
+  height: auto;
+  width: 8.7rem;
+  display: none;
+  max-height: 13rem;
+  padding: 30px 20px;
+  border-radius: 4px;
+  position: absolute;
+  background-color: var(--White);
+}
+
+#navLinks .menu-2 {
+  left: 5rem;
+  max-height: 11rem;
+}
+#navLinks .menu-3 {
+  left: 11rem;
+  max-height: 11rem;
+}
+
+#navLinks .show {
+  height: auto;
+  display: block;
+}
+
+.menu .link a {
+  font-size: 15px;
+  color: var(--Very-dark-grayish-blue);
+}
+
+.menu .link a:hover {
+  font-weight: 900;
+  text-decoration: none;
+}
+
+#navLinks .menu .link:nth-child(even) {
+  margin-inline: 0;
+  margin-block: 1rem;
 }
 
 .link,
 #login a {
   font-size: 14px;
   font-weight: 500;
-}
-
-.link:nth-child(even) {
-  margin-inline: 1.6rem;
 }
 
 a,
@@ -107,10 +154,10 @@ a:visited {
   text-decoration: underline;
 }
 
-.link a:focus > img {
+/* .link a:focus > img {
   transform: rotate(180deg);
   transition: all 0.5s ease;
-}
+} */
 
 .link > a > img {
   margin-left: 6px;
@@ -129,7 +176,9 @@ button:hover {
 
 .btn,
 .learn-more:hover {
-  color: var(--Light-red);
+  font-weight: 700;
+  font-family: var(--Ubuntu);
+  color: var(--Light-red-text);
   background-color: var(--White);
 }
 
@@ -179,8 +228,9 @@ main {
 }
 
 #main-txt-img {
-  height: 80vh;
+  height: 100vh;
   display: flex;
+  justify-content: center;
 }
 
 h2 {
@@ -207,9 +257,19 @@ h3 {
 #main-txt-img #left {
   width: 50%;
   display: flex;
-  margin-left: 12vw;
+  padding-left: 13dvw;
   flex-direction: column;
   justify-content: baseline;
+}
+
+#main-txt-img #right {
+  width: 50%;
+  height: 100%;
+}
+
+#main-txt-img #right img {
+  height: 120%;
+  transform: translate(7.8dvw, -35dvh);
 }
 
 .para {
@@ -220,25 +280,26 @@ h3 {
   color: var(--Very-dark-grayish-blue);
 }
 
-#editor,
-#management {
-  margin: 0 0 5vh 0;
+#editor {
+  margin: 1dvh 0 10dvh 0;
 }
 
 #editor .para {
-  width: 66.3%;
+  width: 90%;
 }
 
 #management .para {
-  width: 64%;
+  width: 88%;
 }
 
 #state-of-art {
   display: flex;
-  height: 60dvh;
-  column-gap: 24vw;
+  height: 58dvh;
+  column-gap: 18vw;
   border-radius: 0 5.5rem;
-  background: var(--blogr-bg-gradient);
+  background: url(./images/bg-pattern-circles.svg), var(--blogr-bg-gradient);
+  background-repeat: no-repeat;
+  background-position: -42.5% 78.5%;
 }
 
 #state-of-art #left {
@@ -248,8 +309,8 @@ h3 {
 }
 
 #state-of-art #left svg {
-  left: 9.5vw;
-  bottom: -14vh;
+  left: 9.3vw;
+  bottom: -15.5vh;
   position: absolute;
 }
 
@@ -269,17 +330,23 @@ h3 {
 }
 
 #state-of-art .para {
-  width: 68%;
+  width: 66%;
   color: var(--Grayish-blue-footer-txt);
 }
 
 #about-blogr {
   display: flex;
-  height: 110dvh;
+  height: 150dvh;
 }
 
 #about-blogr #left {
   width: 50%;
+  height: 100%;
+  margin-top: 20dvh;
+}
+
+#about-blogr #left img {
+  transform: translateX(-17.5rem);
 }
 
 #about-blogr #right {
@@ -322,7 +389,6 @@ footer ul {
 }
 
 footer .link:nth-child(even) {
-  margin-inline: 0;
   margin-block: 2.5vh;
 }
 
