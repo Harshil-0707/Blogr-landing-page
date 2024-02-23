@@ -233,8 +233,8 @@ main {
 }
 
 #main-txt-img {
+  width: 100%;
   display: flex;
-  justify-content: center;
 }
 
 @media (max-width: 376px) {
@@ -247,7 +247,7 @@ h2 {
   font-weight: 500;
   font-size: 2.4rem;
   text-align: center;
-  margin-block: 14vh 15vh;
+  margin-block: 14vh 0;
   font-family: var(--Ubuntu);
   color: var(--Very-dark-blue-heading);
 }
@@ -261,28 +261,22 @@ h3 {
 }
 
 #Design {
-  margin-block: 3vh 0;
+  margin-block: 10vh 0;
 }
 
 #main-txt-img #left {
-  width: 50%;
-  display: flex;
-  padding-top: 11vh;
-  padding-left: 13dvw;
-  flex-direction: column;
+  padding: 20vh 0 0 13vw;
 }
 
 #main-txt-img #right {
   width: 50%;
-  /* height: 100%; */
 }
 
 #main-txt-img #right img {
-  height: 110%;
-  transform: translate(5%, -28dvh);
+  transform: translate(5.5vw, -8dvw);
 }
 
-.dekstop {
+.desktop {
   display: block;
 }
 
@@ -293,7 +287,7 @@ h3 {
 .para {
   font-size: 16px;
   font-weight: 300;
-  line-height: 24px;
+  line-height: 26px;
   font-family: var(--Overpass);
   color: var(--Very-dark-grayish-blue);
 }
@@ -312,8 +306,8 @@ h3 {
 
 #state-of-art {
   display: flex;
-  height: 58dvh;
   column-gap: 18vw;
+  padding-block: 17vh;
   border-radius: 0 5.5rem;
   background: url(./images/bg-pattern-circles.svg), var(--blogr-bg-gradient);
   background-repeat: no-repeat;
@@ -321,18 +315,19 @@ h3 {
 }
 
 #state-of-art #left {
-  width: 60%;
-  height: 100%;
+  width: 40%;
   position: relative;
 }
 
-#state-of-art #left svg {
-  left: 9.3vw;
-  bottom: -15.5vh;
+#state-of-art > #left > svg {
+  top: 60%;
+  left: 70%;
   position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 #state-of-art #right {
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -416,6 +411,10 @@ footer .link:nth-child(even) {
   color: var(--Grayish-blue-footer-txt);
 }
 
+/* @media (max-width: 1375px) {
+
+} */
+
 @media (max-width: 960px) {
   #navLinks,
   #register {
@@ -438,9 +437,9 @@ footer .link:nth-child(even) {
     width: 100%;
   }
   #main-txt-img #right img {
-    transform: translate(2%, 0dvh);
+    transform: translate(2%, 0);
   }
-  .dekstop {
+  .desktop {
     display: none;
   }
   .mobile {
