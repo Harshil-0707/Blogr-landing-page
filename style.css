@@ -248,23 +248,23 @@ main {
 
 h2 {
   font-weight: 500;
-  font-size: 2.4rem;
   text-align: center;
-  margin-block: 14vh 0;
+  margin-block: 13vh 0;
   font-family: var(--Ubuntu);
+  font-size: max(2.8dvw, 1.45rem);
   color: var(--Very-dark-blue-heading);
 }
 
 h3 {
-  font-size: 1.6rem;
   font-weight: 500;
+  font-size: 1.6rem;
   margin-bottom: 6vh;
   font-family: var(--Ubuntu);
   color: var(--Very-dark-blue-heading);
 }
 
 #Design {
-  margin-block: 10vh 0;
+  margin-block: max(5vw, 1rem) 0;
 }
 
 #main-txt-img #left {
@@ -275,19 +275,19 @@ h3 {
 
 #main-txt-img #right {
   width: 50%;
-  height: 100%;
 }
 
 #main-txt-img #right img {
-  width: max(70vw, 100%);
-  transform: translateY(-8dvw);
+  width: max(66vw, 75%);
+  transform: translate(3dvw, -7.8dvw);
 }
 
 .desktop {
   display: block;
 }
 
-.mobile {
+.mobile,
+.menu-btn {
   display: none;
 }
 
@@ -308,17 +308,17 @@ h3 {
 }
 
 #management .para {
-  width: 83.7%;
+  width: 82%;
 }
 
 #state-of-art {
   display: flex;
-  column-gap: 18vw;
-  padding-block: 17vh;
+  column-gap: 7.5vw;
+  padding-block: 18vh;
   border-radius: 0 5.5rem;
   background: url(./images/bg-pattern-circles.svg), var(--blogr-bg-gradient);
   background-repeat: no-repeat;
-  background-position: -42.5% 78.5%;
+  background-position: -44% 88%;
 }
 
 #state-of-art #left {
@@ -326,15 +326,16 @@ h3 {
   position: relative;
 }
 
-#state-of-art > #left > svg {
-  top: 60%;
-  left: 70%;
+#state-of-art > #left > img {
+  top: 50%;
+  left: 64%;
   position: absolute;
+  height: max(38vw, 20rem);
   transform: translate(-50%, -50%);
 }
 
 #state-of-art #right {
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -366,7 +367,7 @@ h3 {
 }
 
 #about-blogr #left img {
-  width: max(70vw, 140%);
+  width: max(70vw, 90%);
   transform: translateX(-20vw);
 }
 
@@ -379,7 +380,7 @@ h3 {
 }
 
 #simple .para {
-  width: 64%;
+  width: 65%;
   line-height: 25px;
   margin-bottom: 10vh;
 }
@@ -429,13 +430,26 @@ footer .link:nth-child(even) {
     background-size: 325%;
     background-position: 33.8% 33.5%;
   }
+  .menu-btn {
+    width: 2rem;
+    height: 1.5rem;
+    position: relative;
+  }
+  .menuBtn {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
   #navLinks,
   #register,
   .desktop {
     display: none;
   }
   .hamburger,
-  .mobile {
+  .mobile,
+  .menu-btn,
+  .hide,
+  .close {
     display: block;
   }
   .hamburger:hover {
@@ -445,6 +459,7 @@ footer .link:nth-child(even) {
     width: 80%;
   }
   #main-txt-img #left {
+    margin: 0;
     padding: 0;
     width: 100%;
     display: flex;
@@ -467,14 +482,45 @@ footer .link:nth-child(even) {
   #main-txt-img #right {
     height: 40%;
     width: 100%;
-    margin: 10vh 0;
     display: flex;
+    margin: 10vh 0;
     justify-content: center;
   }
+
   #main-txt-img #right img,
   #about-blogr #left img {
     transform: translate(0);
   }
+
+  #state-of-art {
+    height: 100dvh;
+    align-items: center;
+    background-size: 166%;
+    margin-block: 20dvw 0;
+    flex-direction: column;
+    background-position: 48% 1500%;
+  }
+
+  #state-of-art > #left {
+    width: 100%;
+    height: 40%;
+  }
+
+  #state-of-art > #left > img {
+    top: -5rem;
+    left: 12rem;
+  }
+
+  #state-of-art #right {
+    width: 100%;
+  }
+
+  #state-of-art #right .para {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
   #about-blogr {
     text-align: center;
     align-items: center;
@@ -491,7 +537,6 @@ footer .link:nth-child(even) {
   #about-blogr #right {
     width: 80%;
     padding-top: 5dvh;
-    /* padding-inline: 10dvw; */
   }
 
   #simple .para,
@@ -504,12 +549,17 @@ footer .link:nth-child(even) {
   footer {
     text-align: center;
     flex-direction: column;
-    /* flex-wrap: wrap;
-    flex-basis: 10rem; */
   }
   #Company,
   #Product,
   #Connect {
     margin-block: 6.5dvh 4dvh;
+  }
+}
+
+@media (max-width: 500px) {
+  #main-txt-img #right img,
+  #about-blogr #left img {
+    width: 100%;
   }
 }
