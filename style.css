@@ -183,7 +183,6 @@ button:hover {
 
 .btn,
 .learn-more:hover {
-  font-weight: 700;
   font-family: var(--Ubuntu);
   color: var(--Light-red-text);
   background-color: var(--White);
@@ -201,6 +200,7 @@ button:hover {
 .learn-more {
   margin-left: 0.7rem;
   color: var(--White);
+  font-family: var(--Ubuntu);
   background-color: transparent;
   border: 1px solid var(--White);
 }
@@ -264,7 +264,7 @@ h3 {
 }
 
 #Design {
-  margin-block: max(5vw, 1rem) 0;
+  margin-block: max(3vw, 1rem) 0;
 }
 
 #main-txt-img #left {
@@ -287,7 +287,7 @@ h3 {
 }
 
 .mobile,
-.menu-btn {
+.menuBtn {
   display: none;
 }
 
@@ -314,7 +314,7 @@ h3 {
 #state-of-art {
   display: flex;
   column-gap: 7.5vw;
-  padding-block: 18vh;
+  padding-block: 18dvh;
   border-radius: 0 5.5rem;
   background: url(./images/bg-pattern-circles.svg), var(--blogr-bg-gradient);
   background-repeat: no-repeat;
@@ -347,7 +347,7 @@ h3 {
 }
 
 #state-of-art h3 {
-  font-size: 2.06rem;
+  font-size: min(7.5vw, 2.68rem);
 }
 
 #state-of-art .para {
@@ -430,15 +430,9 @@ footer .link:nth-child(even) {
     background-size: 325%;
     background-position: 33.8% 33.5%;
   }
-  .menu-btn {
+  .menuBtn {
     width: 2rem;
     height: 1.5rem;
-    position: relative;
-  }
-  .menuBtn {
-    top: 0;
-    left: 0;
-    position: absolute;
   }
   #navLinks,
   #register,
@@ -447,9 +441,7 @@ footer .link:nth-child(even) {
   }
   .hamburger,
   .mobile,
-  .menu-btn,
-  .hide,
-  .close {
+  .menuBtn {
     display: block;
   }
   .hamburger:hover {
@@ -472,9 +464,6 @@ footer .link:nth-child(even) {
     width: 100%;
     text-align: center;
   }
-  #Design {
-    margin: 0;
-  }
   #main-txt-img {
     margin-block: 0;
     flex-direction: column-reverse;
@@ -486,7 +475,6 @@ footer .link:nth-child(even) {
     margin: 10vh 0;
     justify-content: center;
   }
-
   #main-txt-img #right img,
   #about-blogr #left img {
     transform: translate(0);
@@ -496,7 +484,7 @@ footer .link:nth-child(even) {
     height: 100dvh;
     align-items: center;
     background-size: 166%;
-    margin-block: 20dvw 0;
+    margin-block: 40dvw 0;
     flex-direction: column;
     background-position: 48% 1500%;
   }
@@ -508,7 +496,8 @@ footer .link:nth-child(even) {
 
   #state-of-art > #left > img {
     top: -5rem;
-    left: 12rem;
+    left: 11.8rem;
+    height: 66dvh;
   }
 
   #state-of-art #right {
@@ -560,6 +549,20 @@ footer .link:nth-child(even) {
 @media (max-width: 500px) {
   #main-txt-img #right img,
   #about-blogr #left img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 970px) and (min-width: 380px) {
+  #state-of-art > #left > img {
+    top: -30%;
+    left: 50%;
+  }
+}
+
+@media only screen and (max-width: 1250px) and (min-width: 970px) {
+  #editor .para,
+  #management .para {
     width: 100%;
   }
 }
