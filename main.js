@@ -1,11 +1,5 @@
-const menuBtn = document.querySelectorAll(".menu-btn .menuBtn");
 const navLinks = document.querySelectorAll("#navLinks ul .link");
-
-// menuBtn.forEach((btn) => {
-//   btn.addEventListener("click", (b) => {
-//     b.currentTarget.classList.toggle("hide");
-//   });
-// });
+const openMenu = document.getElementById("hamburgericon");
 
 navLinks.forEach((links) => {
   links.addEventListener("click", (e) => {
@@ -13,3 +7,12 @@ navLinks.forEach((links) => {
     link.nextElementSibling.classList.toggle("show");
   });
 });
+
+openMenu.onclick = () => {
+  openMenu.classList.toggle("active");
+  if (openMenu.classList.contains("active")) {
+    openMenu.src = "./images/icon-close.svg";
+  } else {
+    openMenu.src = "./images/icon-hamburger.svg";
+  }
+};
