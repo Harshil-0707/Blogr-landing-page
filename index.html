@@ -12,22 +12,20 @@
     <link rel="stylesheet" href="style.css" />
     <title>Blogr Landing Page</title>
   </head>
-  <body>
+  <body onresize="ScreenWidth()">
     <div id="container">
       <div id="header">
         <nav>
-          <div id="logo-links">
-            <div id="logo">
-              <img src="./images/logo.svg" alt="logo" />
-            </div>
+          <div id="logo">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+          <div class="links-reg">
             <div id="navLinks">
               <ul>
                 <li id="Product" class="link">
                   <a href="#">
-                    Product<img
-                      src="./images/icon-arrow-light.svg"
-                      alt="arrow-light"
-                    />
+                    Product
+                    <div class="img"></div>
                   </a>
                 </li>
                 <div class="menu">
@@ -49,10 +47,8 @@
                 </div>
                 <li id="Company" class="link">
                   <a href="#">
-                    Company<img
-                      src="./images/icon-arrow-light.svg"
-                      alt="arrow-light"
-                    />
+                    Company
+                    <div class="img"></div>
                   </a>
                 </li>
                 <div class="menu menu-2">
@@ -71,10 +67,8 @@
                 </div>
                 <li id="Connect" class="link">
                   <a href="#">
-                    Connect<img
-                      src="./images/icon-arrow-light.svg"
-                      alt="arrow-light"
-                    />
+                    Connect
+                    <div class="img"></div>
                   </a>
                 </li>
                 <div class="menu menu-3">
@@ -90,12 +84,12 @@
                 </div>
               </ul>
             </div>
-          </div>
-          <div id="register">
-            <div id="login">
-              <a href="#">Login</a>
+            <div id="register">
+              <div id="login">
+                <a href="#">Login</a>
+              </div>
+              <button id="signUp-btn" class="btn">Sign Up</button>
             </div>
-            <button id="signUp-btn" class="btn">Sign Up</button>
           </div>
           <div class="menuBtn">
             <img
@@ -103,6 +97,7 @@
               id="hamburgericon"
               src="./images/icon-hamburger.svg"
               alt="hamburger"
+              onclick="MenuClick()"
             />
           </div>
         </nav>
