@@ -10,11 +10,9 @@ navLinks.forEach((links) => {
 });
 
 function ScreenWidth() {
-  if (screen.width >= 971 || openMenu.classList.contains("active")) {
-    linksReg.style.display = "flex";
-  } else {
-    linksReg.style.display = "none";
-  }
+  screen.width >= 971 || openMenu.classList.contains("active")
+    ? (linksReg.style.display = "flex")
+    : (linksReg.style.display = "none");
 }
 
 function MenuClick() {
