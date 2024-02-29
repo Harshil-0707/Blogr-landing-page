@@ -11,6 +11,7 @@
   /* Neutral */
 
   --White: hsl(0, 0%, 100%);
+  --Header-link-bg-mobile: hsl(240, 7%, 94%);
   --Grayish-blue-footer-txt: hsl(240, 2%, 79%);
   --Very-dark-grayish-blue: hsl(207, 13%, 34%);
   --Very-dark-black-blue-footer-bg: hsl(240, 10%, 16%);
@@ -118,7 +119,6 @@ ul > li > a {
   height: auto;
   width: 8.7rem;
   display: none;
-  max-height: 13rem;
   padding: 30px 20px;
   border-radius: 4px;
   position: absolute;
@@ -495,17 +495,27 @@ footer .link:nth-child(even) {
   .links-reg {
     top: 140%;
     width: 100%;
+    z-index: 999;
     display: none;
     position: absolute;
     border-radius: 6px;
     background-color: var(--White);
   }
 
-  #navLinks .menu {
-    position: static;
-    /* color: var(--Very-dark-black-blue-footer-bg); */
-    background-color: var(--Grayish-blue-footer-txt);
+  #navLinks ul {
+    align-items: center;
   }
+
+  #navLinks .menu {
+    width: 100%;
+    position: static;
+    margin-block: 1rem;
+    background-color: var(--Header-link-bg-mobile);
+  }
+  #navLinks .menu a {
+    color: hsl(207, 16%, 44%);
+  }
+
   #Product {
     margin-block: 5vh 0;
   }

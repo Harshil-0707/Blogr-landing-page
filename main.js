@@ -9,22 +9,16 @@ navLinks.forEach((links) => {
   });
 });
 
-function removeMenu() {
-  navLinks.forEach((link) => {
-    link.nextElementSibling.classList.remove("show");
-  });
-}
-
 function ScreenWidth() {
-  if (screen.width >= 971 || openMenu.classList.contains("active")) {
+  if (screen.width > 971 || openMenu.classList.contains("active")) {
     linksReg.style.display = "flex";
   } else {
     linksReg.style.display = "none";
   }
 }
+
 openMenu.onclick = () => {
   openMenu.classList.toggle("active");
-  console.log(openMenu.classList.contains("active"));
   if (openMenu.classList.contains("active")) {
     linksReg.style.display = "flex";
     openMenu.src = "./images/icon-close.svg";
