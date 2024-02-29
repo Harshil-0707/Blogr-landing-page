@@ -509,8 +509,15 @@ footer .link:nth-child(even) {
   #navLinks .menu {
     width: 100%;
     position: static;
-    margin-block: 1rem;
+    margin-block: 1rem 0;
     background-color: var(--Header-link-bg-mobile);
+  }
+  #navLinks .menu-2 {
+    margin-block: 0 1.5rem;
+    padding-block: 1.2rem 0.5rem;
+  }
+  #navLinks .menu-3 {
+    margin-block: 0 1rem;
   }
   #navLinks .menu a {
     color: hsl(207, 16%, 44%);
