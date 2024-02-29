@@ -472,9 +472,6 @@ footer .link:nth-child(even) {
     padding-bottom: 0.6rem;
     border-bottom: 1px solid var(--Grayish-blue-footer-txt);
   }
-  .links-reg {
-    display: none;
-  }
   #signUp-btn {
     margin: 0;
     color: var(--White);
@@ -498,11 +495,17 @@ footer .link:nth-child(even) {
   .links-reg {
     top: 140%;
     width: 100%;
+    display: none;
     position: absolute;
     border-radius: 6px;
     background-color: var(--White);
   }
 
+  #navLinks .menu {
+    position: static;
+    /* color: var(--Very-dark-black-blue-footer-bg); */
+    background-color: var(--Grayish-blue-footer-txt);
+  }
   #Product {
     margin-block: 5vh 0;
   }
