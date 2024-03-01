@@ -1,13 +1,5 @@
 const linksReg = document.querySelector(".links-reg");
 const openMenu = document.getElementById("hamburgericon");
-const navLinks = document.querySelectorAll("#navLinks ul .link");
-
-navLinks.forEach((links) => {
-  links.addEventListener("click", (e) => {
-    const link = e.currentTarget;
-    link.nextElementSibling.classList.toggle("show");
-  });
-});
 
 function ScreenWidth() {
   if (screen.width > 971 || openMenu.classList.contains("active")) {
@@ -17,7 +9,7 @@ function ScreenWidth() {
   }
 }
 
-openMenu.onclick = () => {
+function openMenuOnClick() {
   openMenu.classList.toggle("active");
   if (openMenu.classList.contains("active")) {
     linksReg.style.display = "flex";
@@ -26,4 +18,4 @@ openMenu.onclick = () => {
     linksReg.style.display = "none";
     openMenu.src = "./images/icon-hamburger.svg";
   }
-};
+}

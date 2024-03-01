@@ -112,8 +112,7 @@ ul > li > a {
 #navLinks {
   position: relative;
 }
-
-#navLinks .menu {
+.menu {
   top: 2.6rem;
   left: -1rem;
   height: auto;
@@ -124,18 +123,25 @@ ul > li > a {
   position: absolute;
   background-color: var(--White);
 }
-
-#navLinks .menu-2 {
+.menu-2 {
   left: 6rem;
   max-height: 11rem;
 }
-#navLinks .menu-3 {
+.menu-3 {
   left: 13rem;
   max-height: 11rem;
 }
-#navLinks .show {
+#navLinks .link:focus-within .menu {
   height: auto;
   display: block;
+}
+
+#navLinks .link a > .img {
+  transition: transform 0.5s ease;
+}
+
+#navLinks .link a:focus-within > .img {
+  transform: rotate(180deg);
 }
 
 .menu .link a {
@@ -151,6 +157,10 @@ ul > li > a {
 #navLinks .menu .link:nth-child(even) {
   margin-inline: 0;
   margin-block: 1rem;
+}
+
+#navLinks .link:focus-visible > .img {
+  transform: rotate(180deg);
 }
 
 .link,
@@ -170,19 +180,15 @@ a:visited {
   text-decoration: underline;
 }
 
-/* .link a:focus > img {
-  transform: rotate(180deg);
-  transition: all 0.5s ease;
-} */
-
 #navLinks ul .link a {
   display: flex;
   align-items: center;
 }
 
 #navLinks ul .link a .img {
-  width: 20px;
-  height: 4px;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
   background-repeat: no-repeat;
   background-position: center right;
   background-image: url(./images/icon-arrow-light.svg);
@@ -495,8 +501,7 @@ footer .link:nth-child(even) {
   .links-reg {
     top: 140%;
     width: 100%;
-    z-index: 999;
-    display: none;
+    z-index: 9999;
     position: absolute;
     border-radius: 6px;
     background-color: var(--White);
@@ -507,22 +512,18 @@ footer .link:nth-child(even) {
   }
 
   #navLinks .menu {
-    width: 100%;
+    width: 70dvw;
+    display: none;
     position: static;
     margin-block: 1rem 0;
     background-color: var(--Header-link-bg-mobile);
   }
   #navLinks .menu-2 {
-    margin-block: 0 1.5rem;
     padding-block: 1.2rem 0.5rem;
-  }
-  #navLinks .menu-3 {
-    margin-block: 0 1rem;
   }
   #navLinks .menu a {
     color: hsl(207, 16%, 44%);
   }
-
   #Product {
     margin-block: 5vh 0;
   }
