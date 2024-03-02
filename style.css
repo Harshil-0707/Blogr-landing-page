@@ -42,6 +42,10 @@
     var(--Very-dark-desaturated-blue-gradient)
   );
 
+  /* box shadow */
+
+  --box-shadow: 0px 20px 25px -6px rgba(51, 51, 51, 0.75);
+
   /* Font-Family */
 
   --Ubuntu: "Ubuntu";
@@ -92,12 +96,13 @@ nav {
   margin-right: 5vw;
 }
 
-.links-reg,
-.links-reg1 {
+.links-reg {
   width: 100%;
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  @media (min-width: 971px) {
+    display: flex !important;
+    justify-content: space-between;
+  }
 }
 
 ul {
@@ -110,8 +115,7 @@ ul > li > a {
   font-size: 16px;
 }
 
-#navLinks,
-#navLinks1 {
+#navLinks {
   position: relative;
 }
 .menu {
@@ -133,19 +137,16 @@ ul > li > a {
   left: 13rem;
   max-height: 11rem;
 }
-#navLinks .link:focus-within .menu,
-#navLinks1 .link:focus-within .menu {
+#navLinks .link:focus-within .menu {
   height: auto;
   display: block;
 }
 
-#navLinks .link a > .img,
-#navLinks1 .link a > .img {
+#navLinks .link a > .img {
   transition: transform 0.5s ease;
 }
 
-#navLinks .link a:focus-within > .img,
-#navLinks1 .link a:focus-within > .img {
+#navLinks .link a:focus-within > .img {
   transform: rotate(180deg);
 }
 
@@ -159,8 +160,7 @@ ul > li > a {
   text-decoration: none;
 }
 
-#navLinks .menu .link:nth-child(even),
-#navLinks1 .menu .link:nth-child(even) {
+#navLinks .menu .link:nth-child(even) {
   margin-inline: 0;
   margin-block: 1rem;
 }
@@ -182,14 +182,12 @@ a:visited {
   text-decoration: underline;
 }
 
-#navLinks ul .link a,
-#navLinks1 ul .link a {
+#navLinks ul .link a {
   display: flex;
   align-items: center;
 }
 
-#navLinks ul .link a .img,
-#navLinks1 ul .link a .img {
+#navLinks ul .link a .img {
   width: 10px;
   height: 10px;
   margin-left: 10px;
@@ -455,6 +453,7 @@ footer .link:nth-child(even) {
 }
 
 @media (max-width: 970px) {
+  /* Header */
   #header {
     background: url(./images/bg-pattern-intro-mobile.svg),
       var(--top-bg-gradient-mobile);
@@ -471,22 +470,25 @@ footer .link:nth-child(even) {
     width: 1.5rem;
     height: 1.5rem;
   }
-  #navLinks1 ul .link a {
+  #navLinks ul .link a {
     font-size: 18px;
     justify-content: center;
   }
   #register #login a {
     font-size: 18px;
   }
-  .links-reg1,
+
   #register,
-  #navLinks1 ul {
+  .links-reg,
+  #navLinks ul {
+    align-items: center;
     flex-direction: column;
   }
-  #navLinks1 {
+  #navLinks {
+    width: 86%;
     margin-bottom: 1.6rem;
     padding-bottom: 0.6rem;
-    border-bottom: 1px solid var(--Grayish-blue-footer-txt);
+    border-bottom: 2px solid var(--Header-link-bg-mobile);
   }
   #signUp-btn {
     margin: 0;
@@ -495,41 +497,41 @@ footer .link:nth-child(even) {
     margin-block: 1rem 2rem;
     background: var(--top-bg-gradient-desktop);
   }
-  #navLinks1 ul .link a .img {
+  #navLinks ul .link a .img {
     height: 10px;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url(./images/icon-arrow-dark.svg);
   }
-
   #register #login a,
-  #navLinks1 ul a {
+  #navLinks ul a {
     font-weight: 700;
     font-family: var(--Overpass);
     color: var(--Very-dark-blue-heading);
   }
-  .links-reg1 {
+  .links-reg {
     top: 140%;
     width: 100%;
     z-index: 9999;
     display: none;
     position: absolute;
-    align-items: center;
     border-radius: 6px;
+    align-items: center;
+    box-shadow: var(--box-shadow);
     background-color: var(--White);
   }
 
-  #navLinks1 .menu {
+  #navLinks .menu {
     width: 70dvw;
     display: none;
     position: static;
     margin-block: 1rem 0;
     background-color: var(--Header-link-bg-mobile);
   }
-  #navLinks1 .menu-2 {
+  #navLinks .menu-2 {
     padding-block: 1.2rem 0.5rem;
   }
-  #navLinks1 .menu a {
+  #navLinks .menu a {
     color: hsl(207, 16%, 44%);
   }
   #Product {
@@ -541,6 +543,7 @@ footer .link:nth-child(even) {
   #Connect {
     margin-block: 0 5vh;
   }
+  /* Main */
   .desktop {
     display: none;
   }
