@@ -121,7 +121,6 @@ ul > li > a {
 .menu {
   top: 2.6rem;
   left: -1rem;
-  height: auto;
   width: 8.7rem;
   display: none;
   padding: 30px 20px;
@@ -129,6 +128,7 @@ ul > li > a {
   position: absolute;
   background-color: var(--White);
 }
+
 .menu-2 {
   left: 6rem;
   max-height: 11rem;
@@ -137,6 +137,7 @@ ul > li > a {
   left: 13rem;
   max-height: 11rem;
 }
+
 #navLinks .link:focus-within .menu {
   height: auto;
   display: block;
