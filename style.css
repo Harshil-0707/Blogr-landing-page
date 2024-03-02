@@ -92,7 +92,8 @@ nav {
   margin-right: 5vw;
 }
 
-.links-reg {
+.links-reg,
+.links-reg1 {
   width: 100%;
   display: flex;
   align-items: center;
@@ -109,7 +110,8 @@ ul > li > a {
   font-size: 16px;
 }
 
-#navLinks {
+#navLinks,
+#navLinks1 {
   position: relative;
 }
 .menu {
@@ -131,16 +133,19 @@ ul > li > a {
   left: 13rem;
   max-height: 11rem;
 }
-#navLinks .link:focus-within .menu {
+#navLinks .link:focus-within .menu,
+#navLinks1 .link:focus-within .menu {
   height: auto;
   display: block;
 }
 
-#navLinks .link a > .img {
+#navLinks .link a > .img,
+#navLinks1 .link a > .img {
   transition: transform 0.5s ease;
 }
 
-#navLinks .link a:focus-within > .img {
+#navLinks .link a:focus-within > .img,
+#navLinks1 .link a:focus-within > .img {
   transform: rotate(180deg);
 }
 
@@ -154,13 +159,10 @@ ul > li > a {
   text-decoration: none;
 }
 
-#navLinks .menu .link:nth-child(even) {
+#navLinks .menu .link:nth-child(even),
+#navLinks1 .menu .link:nth-child(even) {
   margin-inline: 0;
   margin-block: 1rem;
-}
-
-#navLinks .link:focus-visible > .img {
-  transform: rotate(180deg);
 }
 
 .link,
@@ -180,12 +182,14 @@ a:visited {
   text-decoration: underline;
 }
 
-#navLinks ul .link a {
+#navLinks ul .link a,
+#navLinks1 ul .link a {
   display: flex;
   align-items: center;
 }
 
-#navLinks ul .link a .img {
+#navLinks ul .link a .img,
+#navLinks1 ul .link a .img {
   width: 10px;
   height: 10px;
   margin-left: 10px;
@@ -446,6 +450,10 @@ footer .link:nth-child(even) {
   color: var(--Grayish-blue-footer-txt);
 }
 
+.links-reg1 {
+  display: none;
+}
+
 @media (max-width: 970px) {
   #header {
     background: url(./images/bg-pattern-intro-mobile.svg),
@@ -456,24 +464,26 @@ footer .link:nth-child(even) {
   nav {
     position: relative;
   }
+  .links-reg {
+    display: none;
+  }
   .menuBtn {
     width: 1.5rem;
     height: 1.5rem;
   }
-  #navLinks ul .link a {
+  #navLinks1 ul .link a {
     font-size: 18px;
     justify-content: center;
   }
   #register #login a {
     font-size: 18px;
   }
-  .links-reg,
+  .links-reg1,
   #register,
-  #navLinks ul {
+  #navLinks1 ul {
     flex-direction: column;
   }
-  #navLinks {
-    width: 85%;
+  #navLinks1 {
     margin-bottom: 1.6rem;
     padding-bottom: 0.6rem;
     border-bottom: 1px solid var(--Grayish-blue-footer-txt);
@@ -485,7 +495,7 @@ footer .link:nth-child(even) {
     margin-block: 1rem 2rem;
     background: var(--top-bg-gradient-desktop);
   }
-  #navLinks ul .link a .img {
+  #navLinks1 ul .link a .img {
     height: 10px;
     background-position: center;
     background-repeat: no-repeat;
@@ -493,35 +503,33 @@ footer .link:nth-child(even) {
   }
 
   #register #login a,
-  #navLinks ul a {
+  #navLinks1 ul a {
     font-weight: 700;
     font-family: var(--Overpass);
     color: var(--Very-dark-blue-heading);
   }
-  .links-reg {
+  .links-reg1 {
     top: 140%;
     width: 100%;
     z-index: 9999;
+    display: none;
     position: absolute;
+    align-items: center;
     border-radius: 6px;
     background-color: var(--White);
   }
 
-  #navLinks ul {
-    align-items: center;
-  }
-
-  #navLinks .menu {
+  #navLinks1 .menu {
     width: 70dvw;
     display: none;
     position: static;
     margin-block: 1rem 0;
     background-color: var(--Header-link-bg-mobile);
   }
-  #navLinks .menu-2 {
+  #navLinks1 .menu-2 {
     padding-block: 1.2rem 0.5rem;
   }
-  #navLinks .menu a {
+  #navLinks1 .menu a {
     color: hsl(207, 16%, 44%);
   }
   #Product {
